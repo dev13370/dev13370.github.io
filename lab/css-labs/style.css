@@ -1,0 +1,181 @@
+html, body {
+  margin: 0;
+  height: 100%;
+}
+
+body, footer, .hero-body {
+  background-color: rgb(0, 85, 74) !important;
+}
+
+a {
+  color: inherit;
+}
+
+a:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
+p {
+  color: rgb(0, 0, 0);
+}
+
+
+
+.sidebar {
+  background-color: rgb(0, 85, 74);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 30px;
+  color: rgb(0, 0, 0);
+  opacity: 1;
+}
+
+.sidebar-link {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.94);
+}
+
+
+.icon, .sidebar-link {
+  transition-duration: 700ms;
+}
+
+.icon:hover {
+  color: rgb(131, 131, 131);
+}
+
+.terminal-bar {
+  background-color: #000000;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  display: flex;
+  position: relative;
+}
+
+.dark-mode {
+  background-image: linear-gradient(200deg, #000000 0%, #313131 100%);
+  border-bottom: 2px solid rgba(0, 0, 0, 0.5);
+}
+
+.dark-mode-text {
+  color: rgb(133, 133, 133) !important;
+}
+
+.icon-btn {
+  border-radius: 50%;
+  margin-top: 9px;
+  height: 18px;
+  width: 18px;
+  margin-bottom: 0.9rem;
+}
+
+.terminal-bar > div.icon-btn:first-child {
+  margin-left: 0.6rem;
+}
+
+.terminal-bar > div.icon-btn:not(:first-child) {
+  margin-left: 0.6rem;
+}
+
+.terminal-bar > div.icon-btn:last-child {
+  margin-right: 0.6rem;
+}
+
+.close {
+  background-color: #000000;
+}
+
+.max {
+  background-color: #007e77;
+}
+
+.min {
+  background-color: #adadac;
+}
+
+.terminal-window {
+  background-color: rgb(0, 0, 0);
+  border-bottom-right-radius: 6px;
+  border-bottom-left-radius: 6px;
+  height: 400px;
+  padding: 1.09rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.primary-bg {
+  background-color: rgb(0, 85, 74);
+}
+
+.shadow {
+  -webkit-box-shadow: 0 5px 10px rgb(0, 0, 0);
+  -moz-box-shadow: 0 5px 10px rgb(0, 0, 0);
+  box-shadow: 0px 3px 15px rgb(0, 0, 0);
+}
+
+.terminal-bar-text {
+  position: absolute;
+  margin-top: 2px;
+  color: #383838;
+  width: 100%;
+  text-align: center;
+  font-weight: 500;
+}
+
+.has-equal-height {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.terminal-output {
+  overflow-y: hidden;
+  overflow: auto;
+}
+
+.column-child {
+  flex: 1;
+}
+
+.terminal-line {
+  position: relative;
+  font-family: "Anonymous Pro", monospace;
+  font-size: 0.9rem;
+  color: #b7c5d2;
+}
+
+.directory {
+  color: #8dd39e;
+  font-weight: 500;
+}
+
+.success {
+  color: #8dd39e;
+}
+
+.code, .error, .fa-heart {
+  color: #e24a61;
+}
+
+.fa-heart {
+  padding-top: 0.5rem;
+}
+
+.dummy-keyboard {
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .resume {
+    padding-bottom: 0.5rem;
+  }
+}
+
