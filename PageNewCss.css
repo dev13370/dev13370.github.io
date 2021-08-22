@@ -1,0 +1,193 @@
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgb(0, 0, 0);
+    position: -webkit-sticky;
+    top: 0;
+}
+li {
+    float: left;
+    border-right: 1px solid rgba(255, 254, 254, 0.151);
+}
+
+
+li a, .learn {
+    display: inline-block;
+    color:cyan;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    margin-left: 230px;
+    margin-top: 5px;
+    margin-bottom: -8px;
+}
+
+li a:hover, .dropdown:hover .learn {
+background-color:darkslategray;
+}
+
+li.dropdown {
+display: inline-block;
+}
+
+.dropdown-content {
+display: none;
+position: absolute;
+background-color:rgb(0, 0, 0);
+min-width: 160px;
+box-shadow: 0px 8px 16px 0px hsl(199, 81%, 25%);
+z-index: 1;
+}
+
+.dropdown-content a {
+color: cyan;
+padding: 12px auto;
+text-decoration: none;
+display: block;
+text-align: left;
+}
+
+.dropdown-content a:hover {background-color: #fdfdfd34;}
+
+.dropdown:hover .dropdown-content {
+display: block;
+}
+
+body {
+    background: linear-gradient(rgb(0, 0, 0), #080808f6);
+    background-repeat:no-repeat;     /* عشان ما يكرر الصوره*/
+    background-position: right top;
+    color:rgb(247, 247, 247);
+    text-align: center;            /* تخلي النصوص تجي في النص*/
+    font-family: 'Open Sans', sans-serif,'Courier New', Courier, monospace ,sans-serif ,Arial, Helvetica, sans-serif;    /* الخط*/
+    font-size: 16px;
+    font-weight: bold;
+    padding:12px;margin-top:auto;
+    background-color: #050404;
+    text-shadow: 0px 0px 2px #131415;
+
+}
+
+form {
+    background-color:darkgray;
+    display: inline;           /*اللون بيكون بس في الكلام*/                  
+}
+
+p {
+    border-style: solid;    /*اطار*/
+    border-width:medium none;      /* سماكة الاطار*/
+    border-color:rgb(0, 0, 0) cyan rgb(0, 0, 0);
+}
+
+
+@import url('https://fonts.googleapis.com/css?family=Lobster&display=swap');
+
+.title {
+  font-size: 2.5rem;
+  font-family: 'Lobster', cursive;
+}
+
+.wrapper {
+  animation: scroll 70s linear infinite;
+  background: url("image.png/space3.jpg"), #0202023a;
+  color: rgba(0, 0, 0, 0.993);
+  height: 90vh;
+  min-width: 360px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 1000px;
+  perspective-origin: 50% 50%;
+  left: 0;
+  right: 0;
+  
+}
+
+@keyframes scroll {100%{
+    background-position:0px -3000px;
+  }
+}
+
+@media (prefers-reduced-motion) {
+  .wrapper {
+    animation: scroll 200s linear infinite;
+  }
+}
+
+@media (min-width: 670px) {
+  .title {
+    font-size: 5rem;
+  }
+}
+
+.wrappe{
+  animation: scroll 70s linear infinite;
+  background:#000000;
+  color: #dee4e4;
+  height: 20vh;
+  min-width: 360px;
+  width: 103%;
+  margin-top: -10.5%;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  perspective: 1000px;
+  perspective-origin: 50% 50%;
+  background-size: 100% auto;
+
+}
+
+.copyright{
+    font-size: initial;
+    margin-top: 10px;
+    padding-bottom: 15px;
+    text-align: center;
+    color: rgb(0, 253, 232);
+}
+
+.drop-btn {
+  background-color: rgb(2, 221, 221);
+  color: rgb(245, 245, 245);
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: 0.4s ease-in-out;
+}
+
+.dropdownn {
+  top: 700px;
+  right: 10px;
+  transition: 0.4s ease-in-out;
+  position: absolute;
+}
+
+.drop-contentt {
+  display: none;
+  position: absolute;
+  background-color: darkslategray;
+  min-width: 160px;
+  z-index: 1;
+  right: 0;
+  border-radius: 10px;
+}
+
+.drop-contentt a {
+  color: rgb(0, 0, 0);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.drop-contentt a:hover {
+  background-color: #f1f1f1;
+} 
+
+.dropdownn:hover .drop-contentt {
+  display: block;   
+}
+

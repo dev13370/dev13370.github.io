@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="ar">
+    
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="assets/styles/normalize.css">
+        <link rel="stylesheet" href="assets/styles/main.css">
+        <link rel="shortcut icon" href="./articles/logo/IMG_3945.PNG">
+        <link rel="stylesheet" type="text/css" href="./articles/css/style.css">
+        <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+        <meta name = "viewport" content = "width = device-width, initial-scale = 1">
+        <meta name = "viewport" content="width=device-width، initial-scale=1">
+        <meta name="keywords" content="سايبر سكيورتي , الامن السيبراني , نابلون , naplon , اختراق, الاختراق, ادوات, برمجة, اختبار الاختراق, اختبار اختراق الويب, الهندسة الاجتماعية, بايثون, سايبر سكيورتي, بيق بونتي, bug bounty, cybersecurity, python tools">
+        <meta name="description" content="موقع هكرناب لاختبار الاختراق ، وتعلم الاختراق ، ومشاركة الأدوات الجديدة ، واللعب معًا ، وكل ما هو جديد في الأمن السيبراني ومكافأة الأخطاء">
+        <meta name="author" content="نابلون">
+        <meta name="robots" content="index, follow" />
+        <meta http-equiv="expires" content="43200"/>
+        <title>HackerNap | هكرناب</title>
+
+      <style>
+
+  body {
+      color:rgb(247, 247, 247); 
+      font-size: 14px;
+      font-weight: bold;
+      padding: -2px;
+      margin-top:auto;
+      background-color: #111111;
+      font-family: "Oswald", sans-serif;
+  }
+
+  @media only screen and (max-width: 1366px) {
+    body {
+      font-size: 3px;
+      
+      }
+  }
+
+  p {
+      border-style: solid;    
+      border-width: medium none;     
+      border-color:rgb(0, 0, 0) rgb(0, 80, 76) rgb(0, 0, 0);
+      font-size: 25px;
+      text-align: center;
+      margin-top: 5px;
+  }
+
+
+  #wrapper {
+    animation: scroll 70s linear infinite;
+    background: url(image.png/IMG_3546.JPEG);
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    vertical-align: middle;
+    background-size: 100%;
+  }
+  @media only screen and (max-width: 1366px) {
+    #wrapper {
+      background-image: url(image.png/IMG_3546.JPEG);
+      height: 40vh;
+      width: 100%;
+      background-size: 100%;
+      }
+  }
+
+  @keyframes scroll {100%{
+      background-position:0px -3000px;
+    }
+  }
+
+
+  @media only screen and (max-width: 1366px) {
+    .title {
+      font-size: 1.50rem;
+    }
+  }
+  @media only screen and (max-width: 1366px) {
+    p {
+      font-size: 12px;
+    }
+  }
+  
+  .copyright{
+      font-size: 17px;
+      padding-bottom: 10px;
+      color: rgb(1, 117, 102);
+      text-align: center;
+      margin-top: -53px;
+      font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      background-color: #111111;
+  }
+
+  @media only screen and (max-width: 1366px) {
+    .copyright {
+      font-size: 10px;
+    }
+  }
+
+  .social{
+    color: rgb(1, 117, 102);
+    font-size: 15px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-right: 69rem;
+    text-align: center;
+  }
+
+  @media only screen and (max-width: 1366px) {
+    .social{
+      font-size: 12px;
+      margin-top: 50px;
+      margin-right: 5px;
+      }
+  }
+  .social a:hover{
+    color: rgb(221, 221, 221);
+  }
+ 
+  .social a{
+    position : relative;
+    margin-left : 20px;
+    color: rgb(1, 117, 102);
+  }
+  .social a:before{
+    content : "";
+    position : absolute;
+    top : 10px;
+    left : -10px;
+    width : 4px;
+    height : 4px;
+    background : rgb(255, 255, 255);
+  }
+  
+  .jscr{
+    text-align: center;
+    margin-top: 50px;
+  }
+
+
+.typewriter h1, h3, .jscr {
+  color: #fff;
+  font-family: monospace;
+  overflow: hidden; 
+  white-space: nowrap; 
+  margin: 20px auto; 
+  letter-spacing: .1em;
+  animation: 
+  typing 15.9s steps(100, end),
+  blink-caret .5s step-end infinite;
+  text-align: center;
+  margin-top: 40px;
+}
+
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+
+    </style> 
+        
+    </head>
+
+
+    
+    <body>
+
+        <div id="wrapper"></div>
+
+        <!-- Section: Header -->
+<header class="header">
+  <div class="container">
+     <section class="wrapper">
+      <section class="info">
+        <img src="./articles/logo/IMG_3945.PNG">
+      </section>
+        <button type="button" class="opened-menu">
+           <span></span>
+           <span></span>
+           <span></span>
+           <span></span>
+        </button>
+        <div class="overlay"></div>
+        <nav class="navbar">
+          <button type="button" class="closed-menu">
+            <img src="../articles/asset/closed.svg" class="closed-icon" alt="closed">
+         </button>
+         <ul class="menu">
+            <li class="menu-item"><a href="/ar.tools.html" target="_blank">أدوات</a></li>
+            <li class="menu-item menu-item-has-children">
+               <a href="/articles/blog.html" data-toggle="sub-menu">مختبرات<i class="expand"></i></a>
+               <ul class="sub-menu">
+                  <li class="menu-item"><a href="/lab/Xss-labs.html" target="_blank">Xss</a></li>
+               </ul>
+            </li>
+            <li class="menu-item menu-item-has-children">
+              <a href="/articles/blog.html" data-toggle="sub-menu">تعلم القرصنة<i class="expand"></i></a>
+              <ul class="sub-menu">
+                 <li class="menu-item"><a href="/articles/web-application-penetration-test.html">إختبار إختراق تطبيقات الويب</a></li>
+                 <li class="menu-item"><a href="/articles/blogs/python-libraries-pentester.html">أفضل مكتبات بايثون في إختبار الإختراق</a></li>
+                 <li class="menu-item"><a href="/articles/blogs/different-types-and-methods-of-penetration-testing.html">أنواع وطرق إختبار الإختراق</a></li>
+              </ul>
+           </li>
+            <li class="menu-item"><a href="/articles/blog.html">مدونة</a></li>
+          </ul>
+        </nav>
+     </section>
+  </div>
+</header>
+      <script src="./articles/js/script.js" defer></script>
+
+        
+      <div class="typewriter"> 
+        <h1>عالم وفضاء للقرصنة</h1>
+        <h3>Developer﹒Bug Hunter﹒Ctf Player﹒Beginner</h3>
+      </div>
+        <p>
+            أشارككم جميع أدواتي الجديدة وكيفية اختبار الاختراق والقرصنة وعالم الكشف عن الثغرات الأمنية 
+        </p>  
+        <p>
+            من أنا؟ أنا نابلون ، شابً شغوف بالقرصنة والبرمجة محب للفلسفة ، وأحب قراءة الكتب معا قهوتي المفضلة ، وأسعى لتعلم كل ما هو جديد ومشاركته معك
+        </p>
+        
+
+        <!--javascript-->
+      <div class="jscr">
+        <script type="text/javascript">
+          //store the quotations in arrays
+          const quotes = [
+
+          "علوم الكمبيوتر لعالم الكمبيوتر مثل تلسكوب الفضاء | إدسجر ديكسترا.",
+            "تمامًا مثلما تتحكم في جهازك ، فأنت تتحكم في عقلك",
+            "القرصنة موهبة ، لن تتعلمها في المدرسة",
+            "المتعلم الذاتي ، القراءة !!",
+            "كلما تعلمت أكثر ، أردت أن تتعلم أكثر",
+            "التعليم ليس له نهاية.",
+            "تعلم كل شيء. املأ عقلك بالمعرفة - إنها النوع الوحيد من القوة التي لا يمكن لأحد أن يأخذها منك. | مين جين لي",
+            "أصبح الوصول إلى الكمبيوتر والإنترنت أحد الاحتياجات الأساسية للتعليم في المجتمع. | كينت كونراد",
+            "البحث عن شيء دائم هو أحد أعمق الغرائز التي تقود الرجال إلى الفلسفة | برتراند راسل",
+            "كن أنت التغيير الذي تتمنى أن تراه في العالم | مهاتما غاندي",
+            "الإنسان هو المخلوق الوحيد الذي يرفض أن يكون ما هو عليه. | ألبير كامو",
+            "معرفة نفسك هو بداية كل حكمة. | أرسطو",
+            "الحكمة الحقيقية الوحيدة هي معرفة أنك لا تعرف شيئًا. | سقراط",
+            "من سمات العقل المثقف أن يكون قادرًا على الاستمتاع بفكرة دون قبولها. | أرسطو ",
+            "أي أحمق يمكنه أن يعرف. الهدف هو أن يفهم | ألبرت أينشتاين",
+            "بالأمس كنت ذكيًا ، لذلك أردت تغيير العالم. اليوم أنا حكيم ، لذلك أنا أغير نفسي. | الرومي",
+            "تعلم أن تضيء شمعة في لحظات حياة شخص ما. كن النور الذي يساعد الآخرين على الرؤية ؛ إنه ما يعطي الحياة أعمق أهميتها. | أرنولد بينيت -",
+            "يمتلك كل مبتدئ إمكانات كبيرة ليكون خبيرًا في المجال الذي اختاره. | ليلى جيفتي أكيتا",
+            "ارتكب أخطاء ، ارتكب الكثير منها لتصبح أذكاء. | ستيفن ماجي"
+
+          ];
+        
+          index = Math.floor(Math.random() * quotes.length);
+          //display the quotation
+          document.write(quotes[index]);
+          //done
+
+        </script> 
+      </div>
+    <footer class="social">
+      <br>
+      <br>
+      <br>
+      <a href="http://www.snapchat.com/add/ii42"target="_blank">Snapchat</a>
+      <a href="https://twitter.com/_naplon"target="_blank">Twitter</a>
+      <a href="https://www.instagram.com/3h6h/"target="_blank">Instagram</a>
+      <a href="https://t.me/naplon0"target="_blank">Telegram</a>
+      &#128125; تواصل معي
+    </footer>
+
+    <footer class="copyright">
+      <br>
+      HackerNap &#169; حقوق النشر 2021
+    </footer>
+
+        
+    </body>
+</html>
