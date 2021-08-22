@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+
+<html lang="ar">
+
+<head>
+  <meta charset="utf-8">
+  <meta name = "viewport" content = "width = device-width, initial-scale = 1">
+  <meta name="author" content="Syahrizaldev">
+  <meta name="keywords" content="كيف تفكر خارج الصندوق في إكتشاف الثغرات , كيف اكتشف ثغرات الويب , كيف اتطور في اكتشاف الاخطاء , التفكير خارج الصندوق في إختبار الإختراق , التفكير خارج الصندوق , اسلوب اكتشاف الثغرات , طرق اكتشاف الثغرات , هكر ناب bugbounty , HackerNap">
+  <meta name="description" content="السلام عليكم قبل فترة قريت مقال او نقدر نقول كانت نصائح من مكتشف ثغرات فرنسي وشدتني المقالة وحبيت اشارككم ما كان في المقالة باللغة العربية">
+  <title> كيف تفكر خارج الصندوق في إكتشاف الثغرات الجزء الأول  </title>
+  <link rel="stylesheet" type="text/css" href="/articles/css/reset.min.css">
+  <link rel="stylesheet" type="text/css" href="/articles/css/style.css">
+  <link rel="shortcut icon" href="/articles/logo/IMG_3945.PNG">
+
+<style>
+@import url('https://fonts.googleapis.com/css?family=Heebo:400,700|Open+Sans:400,700');
+
+:root {
+  --color: #ffffff;
+  --transition-time: 0.5s;
+}
+
+* {
+  box-sizing: border-box;
+}
+a {
+  color: inherit;
+}
+.info img {
+  height: 3em;
+  margin-right: 1.5em;
+}
+@media screen and (max-width: 500px) {
+  .card {
+    max-width: calc(100vw - 15rem);
+  }
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+#image {
+    animation: scroll 70s linear infinite;
+    background: url(../image.png/IMG_3944.PNG);
+    background-size: cover;
+    height: 10vh;
+    width: 100%;
+    vertical-align: middle;
+    background-size: 100%;
+  }
+  @media only screen and (max-width: 1366px) {
+    #image {
+      background-image: url(../image.png/IMG_3944.PNG);
+      height: 8vh;
+      width: 100%;
+      background-size: 100%;
+      }
+  }
+  @keyframes scroll {100%{
+      background-position:0px -3000px;
+    }
+  }
+
+  body {
+  border: 16px solid rgb(0, 85, 74);
+  padding: 20px;
+  max-width: 900px;
+  width: 80%;
+  margin: 20px auto;
+  box-shadow: 0px 0px 10px #000;
+  background-color:rgb(214, 214, 214);
+}
+
+h2 {
+  font-size: 2rem;
+  color: #1a1c1d;
+  text-align: center;
+}
+h5 {
+  font-size: 18px;
+  color: #4a4e13;
+  text-align: center;
+}
+h3{
+  font-size: 15;
+  color: #000;
+  text-align: center;
+}
+p {
+  color:rgb(8, 19, 17);
+  font-size: 20px;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  text-align:center;
+}
+
+.date {
+  color: #030303;
+  letter-spacing: 0.1rem;
+}
+
+@media only screen and (max-width: 1366px) {
+    body {
+      width: 90%;
+      }
+      p {
+        font-size: 15px;
+      }
+      .post2 {
+        font-size: 15px;
+      }
+      h2 {
+        font-size: 14px;
+      }
+      .date {
+        font-size: 9px;
+        margin-top: -50px;
+      }
+  }
+
+hr {
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0.75),
+    rgba(0, 0, 0, 0)
+  );
+}
+
+.post2 {
+  margin-top: 20px;
+  color:rgb(0, 85, 74);
+  font-size: 18px;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  text-align: right;
+}
+
+
+.img-blog {
+    width: 500rem;
+}
+.gif {
+  width: 55rem;
+}
+.copyright{
+      font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      font-size: 15px;
+      padding-bottom: 10px;
+      color: rgb(1, 117, 102);
+      text-align: center;
+      margin-top: 53px;
+  }
+
+  @media only screen and (max-width: 1366px) and (max-width: 1024px) {
+    .copyright {
+      font-size: 1px;
+    }
+  }
+
+
+  
+</style>
+
+</head>
+
+<body>
+  <div id="image"></div>
+<!-- Section: Header -->
+<header class="header">
+  <div class="container">
+     <section class="wrapper">
+      <section class="info">
+        <img src="/articles/logo/IMG_3945.PNG">
+      </section>
+        <h1><a href="/articles/blog.html" class="brand">HackerNap</a></h1>
+        <button type="button" class="opened-menu">
+           <span></span>
+           <span></span>
+           <span></span>
+           <span></span>
+        </button>
+        <div class="overlay"></div>
+        <nav class="navbar">
+          <button type="button" class="closed-menu">
+            <img src="../articles/asset/closed.svg" class="closed-icon" alt="closed">
+         </button>
+         <ul class="menu">
+            <li class="menu-item"><a href="/ar.tools.html" target="_blank">أدوات</a></li>
+            <li class="menu-item menu-item-has-children">
+               <a href="/articles/blog.html" data-toggle="sub-menu">مختبرات<i class="expand"></i></a>
+               <ul class="sub-menu">
+                  <li class="menu-item"><a href="/lab/Xss-labs.html" target="_blank">Xss</a></li>
+               </ul>
+            </li>
+            <li class="menu-item menu-item-has-children">
+               <a href="/articles/blog.html" data-toggle="sub-menu">تعلم القرصنة<i class="expand"></i></a>
+               <ul class="sub-menu">
+                <li class="menu-item"><a href="/articles/web-application-penetration-test.html">إختبار إختراق تطبيقات الويب</a></li>
+                <li class="menu-item"><a href="/articles/blogs/python-libraries-pentester.html">أفضل مكتبات بايثون في إختبار الإختراق</a></li>
+                <li class="menu-item"><a href="/articles/blogs/different-types-and-methods-of-penetration-testing.html">أنواع وطرق إختبار الإختراق</a></li>
+               </ul>
+            </li>
+            <li class="menu-item"><a href="/virtual.html">العالم الافتراضي</a></li>
+          </ul>
+        </nav>
+     </section>
+  </div>
+</header>
+      <script src="/articles/js/script.js" defer></script>
+      <br>
+      <br>
+      <br>
+      
+      <div class="post">
+        <div class="date">HackerNap 2021</div>
+        <h2 class="title">{كيف تفكر خارج الصندوق في إكتشاف الثغرات 1}</h2><br><br>
+        <h2>
+           السلام عليكم قبل فترة قريت مقال او نقدر نقول كانت نصائح من مكتشف ثغرات فرنسي وشدتني المقالة وحبيت اشارككم ما كان في المقالة باللغة العربية وأسلوب المقال ذا بيكون سلسلة مقالأت مقسمة على أجزء وكل جزء بيكون نصائح و أفكار وعقلية جديدة<br>
+         صائد اليوم لديه خبره لاكثر من 3 سنوات وايضاً صائد حشرات بدوام كامل .. حقاً لنبدأ
+        </h2>
+        <hr>
+        <hr> 
+        <br>
+        <p>سأل أحد الأشخاص على تويتر عن الأدوات التي يستخدمونها أكثر من غيرها في الصيد</p>
+        <p>(كانت الإجابة بالفرنسية ولكن هنا الترجمة العربية)</p>
+        <p>
+          #bugbounty خيال في<br>
+          المعرفة التقنية ليست مهمة جدًا ، ما عليك سوى أن تفعل ما لا يفعله الآخرون ، لأنهم لم يفكروا في الأمر أو لأنهم كانوا كسالى ، وهو ما يضمن النجاح
+        </p>
+        <img src="https://media4.giphy.com/media/IpeYSEZshTefe/giphy.gif?cid=ecf05e47s9wqjb5zdzzvc92j1d0tanjmpadb6bo6mxgqsxzn&rid=giphy.gif&ct=g" rel="nofollow" alt="gif-photo" class="gif">
+      </div>
+    
+      <div class="post2">
+        <p>
+          كلما شعرت أن المهمة مملة ، تأكد من شعور الصيادين الآخرين بنفس الشعور. لذلك إذا تمكنت من تجاوز هذا الشعور ، فستجد ما فاته الآخرون لأنهم استسلموا. أتذكر برنامجًا نجحت فيه
+          باستخدام القوة الغاشمة للدليل ، عثرت أولاً على دليل<br>
+          يقوم العديد من الصيادين بالإبلاغ على الفور عن الكشف عن المعلومات. ولكن بعد الحصول على الكود ودراسته ، وجدت git 
+        <br>
+        RCE<br>
+        مثال آخر هو من ملفات جافا سكريبت. قد يكون استخراج نقاط النهاية ، والعثور على المعلمات ، والقيمة الجيدة ، وما إلى ذلك أمرًا شاقًا للغاية ... ولكن مرة أخرى ، إذا استمريت في الإصرار ، فسيتم الدفع مقابل ذلك بالتأكيد
+        <br>
+        هذا كل شيء :)<br>
+        <strong>الصيد مثل كل رياضة ، 50٪ يتعلق بالمهارات ، 50٪ يتعلق بالروح و 10٪ من الحظ</strong>
+        </p><br>
+        <p>
+          اذا بتشاركنا تقنيات نصائح اي شي لنا كا مبتدئين استقبله بصدر رحب سنابي تحت حياك
+        <br>
+        <img src="https://media4.giphy.com/media/DaqTYeahY9b44/giphy.gif?cid=ecf05e47ckxupof9xgbti1fezvymkazywqvuaoxwrj1npe2f&rid=giphy.gif&ct=g" rel="nofollow" alt="gif-photo" class="gif">
+
+        : واخيراً اذا بتشارك بعد في مقالة كيف تفكر خارج الصندوق جاوب على الأسالة اللي تحت وعادي ضيف من عندك اي شي ممكن يكون مفيد وارسلها لي سناب<br>
+          <br>
+          <p><h5>➡ كيف وجدت اول ثغره لك ؟</h5></p>
+          <p><h5>➡ كيف تجد الأخطاء التي ليست مكررة؟</h5></p>
+          <p><h5>➡ كيف تجد مجالات بحث جديدة؟</h5></p>
+          <p><h5>➡ كيف تجد الأخطاء المنطقية أو الأخطاء التي لا تندرج تحت أي فئة ، ولا يمكن العثور عليها باستخدام الأدوات أو تتطلب تفكيرًا حقيقيًا؟</h5></p>
+          <img src="https://media2.giphy.com/media/U6kTpJ6GIEZ0jdBhNb/giphy.gif?cid=ecf05e47cic6eme3urtdbx028gs7d8t35m1sbugguwdvt5gk&rid=giphy.gif&ct=g" rel="nofollow" alt="gif-photo" class="gif">
+          <br><hr>        
+        &#10084;اللهم صل على سيدنا محمد
+        </p>
+        
+      </div>
+
+
+      
+      <footer class="copyright">
+        <br>
+        <br>
+        <a href="http://www.snapchat.com/add/ii42"target="_blank">Snapchat</a>
+        <a href="https://twitter.com/_naplon"target="_blank">Twitter</a>
+        <a href="https://www.instagram.com/3h6h/"target="_blank">Instagram</a>
+        <a href="https://t.me/naplon0"target="_blank">Telegram</a>
+        &#128125; تواصل معي
+        <br>
+        HackerNap &#169; حقوق النشر 2021
+      </footer>
+</body>
+</html> 

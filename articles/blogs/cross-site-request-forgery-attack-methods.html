@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+
+<html lang="ar">
+
+<head>
+  <meta charset="utf-8">
+  <meta name = "viewport" content = "width = device-width, initial-scale = 1">
+  <meta name="author" content="Syahrizaldev">
+  <meta name="keywords" content="تزوير الطلب عبر المواقع , بعض الأساليب لتجد ثغرة تزوير الطلب عبر المواقع , اساليب ثغرة تزوير الطلب , هكرناب , csrf">
+  <meta name="description" content="في هجوم تزوير الطلب عبر المواقع ناجح يتسبب المهاجم في قيام المستخدم او الضحية بتنفيذ إجراء دون قصد. على سبيل المثال ، قد يكون هذا لتغيير عنوان البريد الإلكتروني على حسابهم ، أو لتغيير كلمة المرور الخاصة بهم ، أو لإجراء تحويل أموال. اعتمادًا على طبيعة الإجراء ، قد يتمكن المهاجم من التحكم بشكل كامل في حساب المستخدم. إذا كان لدى المستخدم المخترق دور متميز داخل التطبيق ، فقد يتمكن المهاجم من التحكم الكامل في جميع بيانات ووظائف التطبيق">
+  <title> csrf بعض الأساليب لتجد ثغرة تزوير الطلب عبر المواقع</title>
+  <link rel="stylesheet" type="text/css" href="/articles/css/reset.min.css">
+  <link rel="stylesheet" type="text/css" href="/articles/css/style.css">
+  <link rel="shortcut icon" href="/articles/logo/IMG_3945.PNG">
+
+<style>
+@import url('https://fonts.googleapis.com/css?family=Heebo:400,700|Open+Sans:400,700');
+
+:root {
+  --color: #ffffff;
+  --transition-time: 0.5s;
+}
+
+* {
+  box-sizing: border-box;
+}
+a {
+  color: inherit;
+}
+.info img {
+  height: 3em;
+  margin-right: 1.5em;
+}
+@media screen and (max-width: 500px) {
+  .card {
+    max-width: calc(100vw - 15rem);
+  }
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+#image {
+    animation: scroll 70s linear infinite;
+    background: url(../image.png/IMG_3944.PNG);
+    background-size: cover;
+    height: 10vh;
+    width: 100%;
+    vertical-align: middle;
+    background-size: 100%;
+  }
+  @media only screen and (max-width: 1366px) {
+    #image {
+      background-image: url(../image.png/IMG_3944.PNG);
+      height: 8vh;
+      width: 100%;
+      background-size: 100%;
+      }
+  }
+  @keyframes scroll {100%{
+      background-position:0px -3000px;
+    }
+  }
+
+  body {
+  border: 16px solid rgb(0, 85, 74);
+  padding: 20px;
+  max-width: 900px;
+  width: 80%;
+  margin: 20px auto;
+  box-shadow: 0px 0px 10px #000;
+  background-color:rgb(214, 214, 214);
+}
+
+h2 {
+  font-size: 2rem;
+  color: #1a1c1d;
+  text-align: center;
+}
+
+p {
+  color:rgb(0, 85, 74);
+  font-size: 18px;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  text-align:right;
+}
+
+.date {
+  color: #030303;
+  letter-spacing: 0.1rem;
+}
+
+@media only screen and (max-width: 1366px) {
+    body {
+      width: 90%;
+      }
+      p {
+        font-size: 15px;
+      }
+      .post2 {
+        font-size: 15px;
+      }
+      h2 {
+        font-size: 14px;
+      }
+      .date {
+        font-size: 9px;
+        margin-top: -50px;
+      }
+  }
+
+hr {
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0.75),
+    rgba(0, 0, 0, 0)
+  );
+}
+
+.post2 {
+  margin-top: 20px;
+  color:rgb(0, 85, 74);
+  font-size: 18px;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  text-align: right;
+}
+
+
+.img-blog {
+    width: 500rem;
+}
+.gif {
+  width: 55rem;
+}
+.copyright{
+      font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      font-size: 15px;
+      padding-bottom: 10px;
+      color: rgb(1, 117, 102);
+      text-align: center;
+      margin-top: 53px;
+  }
+
+  @media only screen and (max-width: 1366px) and (max-width: 1024px) {
+    .copyright {
+      font-size: 1px;
+    }
+  }
+
+
+  
+</style>
+
+</head>
+
+<body>
+  <div id="image"></div>
+<!-- Section: Header -->
+<header class="header">
+  <div class="container">
+     <section class="wrapper">
+      <section class="info">
+        <img src="/articles/logo/IMG_3945.PNG">
+      </section>
+        <h1><a href="/articles/blog.html" class="brand">HackerNap</a></h1>
+        <button type="button" class="opened-menu">
+           <span></span>
+           <span></span>
+           <span></span>
+           <span></span>
+        </button>
+        <div class="overlay"></div>
+        <nav class="navbar">
+          <button type="button" class="closed-menu">
+            <img src="../articles/asset/closed.svg" class="closed-icon" alt="closed">
+         </button>
+         <ul class="menu">
+            <li class="menu-item"><a href="/ar.tools.html" target="_blank">أدوات</a></li>
+            <li class="menu-item menu-item-has-children">
+               <a href="/articles/blog.html" data-toggle="sub-menu">مختبرات<i class="expand"></i></a>
+               <ul class="sub-menu">
+                  <li class="menu-item"><a href="/lab/Xss-labs.html" target="_blank">Xss</a></li>
+               </ul>
+            </li>
+            <li class="menu-item menu-item-has-children">
+               <a href="/articles/blog.html" data-toggle="sub-menu">تعلم القرصنة<i class="expand"></i></a>
+               <ul class="sub-menu">
+                <li class="menu-item"><a href="/articles/web-application-penetration-test.html">إختبار إختراق تطبيقات الويب</a></li>
+                <li class="menu-item"><a href="/articles/blogs/python-libraries-pentester.html">أفضل مكتبات بايثون في إختبار الإختراق</a></li>
+                <li class="menu-item"><a href="/articles/blogs/different-types-and-methods-of-penetration-testing.html">أنواع وطرق إختبار الإختراق</a></li>
+               </ul>
+            </li>
+            <li class="menu-item"><a href="/virtual.html">العالم الافتراضي</a></li>
+          </ul>
+        </nav>
+     </section>
+  </div>
+</header>
+      <script src="/articles/js/script.js" defer></script>
+      <br>
+      <br>
+      <br>
+      
+      <div class="post">
+        <div class="date">HackerNap 2021</div>
+        <h2 class="title">{CSRF | تزوير الطلب عبر المواقع}</h2><br><br>
+        <img src="/image.png/IMG_4446.JPG" rel="nofollow" alt="gif-photo" class="gif">
+        <h2>
+           في هجوم تزوير الطلب عبر المواقع ناجح يتسبب المهاجم في قيام المستخدم او الضحية بتنفيذ إجراء دون قصد. على سبيل المثال ، قد يكون هذا لتغيير عنوان البريد الإلكتروني على حسابهم ، أو لتغيير كلمة المرور الخاصة بهم ، أو لإجراء تحويل أموال. اعتمادًا على طبيعة الإجراء ، قد يتمكن المهاجم من التحكم بشكل كامل في حساب المستخدم. إذا كان لدى المستخدم المخترق دور متميز داخل التطبيق ، فقد يتمكن المهاجم من التحكم الكامل في جميع بيانات ووظائف التطبيق
+        </h2>
+        <hr>
+        <hr>
+      </div>
+    
+      <div class="post2">
+        <p>
+        <h2>{csrfفيما يلي بعض الأساليب للعثور على}</h2>
+        <br>
+        <p>
+         1 - قم بإنشاء حساب مستخدم وهمي في الموقع المستهدف الذي تحتاج إلى اختباره<br>
+         <br>
+         2 - تحقق من عنوان بريدك إذا طلب التحقق<br>
+         <br>
+         3 - انتقل إلى ملف التعريف / إعدادات الحساب الخاص بك<br>
+         <br>
+         4 - ابحث عن بعض النماذج الحساسة مثل "تغيير اسم المستخدم" ، و "تغيير كلمة المرور" ، و"تغير البريد الالكتروني" ، و "إضافة السيرة الذاتية" ، و "حذف الملف الشخصي" ، إلخ
+        <br>
+        <br>
+         5 - حاول تغيير القيم الافتراضية في تلك النماذج وإرسال النموذج<br>
+         <br>
+         6 - BurpSuite احصل على الطلب في التجشؤ او<br>
+         <br>
+         7 - CSRF / Form موجودًا أم لا!! أي أنهم في بعض مواقع الويب يستخدمون رموز CSRF تحقق مما إذا كان أي رمز<br>
+        <br>
+        أثناء إرسال الطلب. هذه الرموز عبارة عن سلسلة عشوائية من الأحرف تتغير في كل مرة يتم فيها تحميل موقع الويب إنه إجراء تخفيفي ضد هجمات تزوير الطلب عبر المواقع
+        <br>
+        8 - إذا لم يكن الرمز المميز موجودًا ، فقد يكون الموقع عرضة لـ هجمات تزوير الطلب عبر المواقع<br>
+        <br>
+        9 - انت الان بخير أرسل الطلب للتكرار وإسقاط الطلب<br>
+        <br>
+        10 - انتقل إلى علامة التبويب مكرر إرسال الطلب. إذا ظهرت الاستجابة 200 ، فحاول مرة أخرى ، ولكن هذه المرة فقط غيّر أي قيمة في الطلب وأرسل الطلب<br>
+        <br>
+        11 - انتقل إلى ملف التعريف الخاص بك وتحقق من تحديث القيمة التي أرسلتها عبر (التجشؤ) في ملف التعريف الخاص بك. إذا تم تحديثه ، فهو عرضة للخطر<br>
+        <br>
+        12 - الآن قم ببناء نموذج استغلال<br>
+        <br>
+        13 - يجب أن تحتوي صفحة ويب الاستغلال على نفس النموذج ولكن يجب أن تكون معلمة "الإجراء" مساوية لـ<br>
+        http://target.com/csrf_vulnerable.php<br>
+       "ويجب أن تكون جميع حقول إدخال النموذج "مخفية<br>
+       <a href="https://0bin.net/paste/hxZ+ir5o#zuThd20EfVkvsw3+8eS6G28XsFvJFzTIZbDK30gkegu"target="_blank">الاستغلال متاحاً هنا(إنتقال)</a><br>
+       <br>
+       يهدف الاستغلال إلى إضافة عنوان تعريفي أخر إلى ملف تعريف الضحية تقدر تعدل عليه براحتك<br>
+       "example.com" ملاحظة: لقد غيرت اسم المجال إلى
+      <br>
+      <h3>:) واخيراً اللهم صل على سيدنا محمد</h3>
+      </p>
+      </div>
+
+
+      
+      <footer class="copyright">
+        <br>
+        <br>
+        <a href="http://www.snapchat.com/add/ii42"target="_blank">Snapchat</a>
+        <a href="https://twitter.com/_naplon"target="_blank">Twitter</a>
+        <a href="https://www.instagram.com/3h6h/"target="_blank">Instagram</a>
+        <a href="https://t.me/naplon0"target="_blank">Telegram</a>
+        &#128125; تواصل معي
+        <br>
+        HackerNap &#169; حقوق النشر 2021
+      </footer>
+</body>
+</html> 
