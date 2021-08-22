@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+
+<html lang="ar">
+
+<head>
+  <meta charset="utf-8">
+  <meta name = "viewport" content = "width = device-width, initial-scale = 1">
+  <meta name="author" content="Syahrizaldev">
+  <meta name="keywords" content="أسلوب التعلم المدرسي , كيف يكون أسلوب التعلم , تعلم كيف تتعلم , كيف اتعلم , التعليم الذاتي , كيف اتعلم اختبار الاختراق , تعلم البرمجة , كيف نتعلم , المحتوئ العربي في الامن السيبراني , المحتوئ العربي في البرمجة , كيف تتعلم من التعلم , هكرناب , HackerNap">
+  <meta name="description" content="..كلام من ذهب اعتمد الخطوة القادمة إذا بحثت عن اي شي ولم تجده خصوصا في اختبار الاختراق ككل ماذا تفعل بكل بساطة أذا كنت تبحث">
+  <title>تعلم كيف تتعلم !!</title>
+  <link rel="stylesheet" type="text/css" href="/articles/css/reset.min.css">
+  <link rel="stylesheet" type="text/css" href="/articles/css/style.css">
+  <link rel="shortcut icon" href="/articles/logo/IMG_3945.PNG">
+
+<style>
+@import url('https://fonts.googleapis.com/css?family=Heebo:400,700|Open+Sans:400,700');
+
+:root {
+  --color: #ffffff;
+  --transition-time: 0.5s;
+}
+
+* {
+  box-sizing: border-box;
+}
+a {
+  color: inherit;
+}
+.info img {
+  height: 3em;
+  margin-right: 1.5em;
+}
+@media screen and (max-width: 500px) {
+  .card {
+    max-width: calc(100vw - 15rem);
+  }
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+#image {
+    animation: scroll 70s linear infinite;
+    background: url(../image.png/IMG_3944.PNG);
+    background-size: cover;
+    height: 10vh;
+    width: 100%;
+    vertical-align: middle;
+    background-size: 100%;
+  }
+  @media only screen and (max-width: 1366px) {
+    #image {
+      background-image: url(../image.png/IMG_3944.PNG);
+      height: 8vh;
+      width: 100%;
+      background-size: 100%;
+      }
+  }
+  @keyframes scroll {100%{
+      background-position:0px -3000px;
+    }
+  }
+
+  body {
+  border: 16px solid rgb(0, 85, 74);
+  padding: 20px;
+  max-width: 900px;
+  width: 80%;
+  margin: 20px auto;
+  box-shadow: 0px 0px 10px #000;
+  background-color:rgb(214, 214, 214);
+}
+
+h2 {
+  font-size: 2rem;
+  color: #1a1c1d;
+  text-align: center;
+}
+
+p {
+  color:rgb(0, 85, 74);
+  font-size: 18px;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  text-align:right;
+}
+
+.date {
+  color: #030303;
+  letter-spacing: 0.1rem;
+}
+h3 {
+   color:#1a1c1d;
+   text-align: center;
+}
+@media only screen and (max-width: 1366px) {
+    body {
+      width: 90%;
+      }
+      p {
+        font-size: 15px;
+      }
+      .post2 {
+        font-size: 15px;
+      }
+      h2 {
+        font-size: 14px;
+      }
+      .date {
+        font-size: 9px;
+        margin-top: -50px;
+      }
+  }
+
+hr {
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0.75),
+    rgba(0, 0, 0, 0)
+  );
+}
+
+.post2 {
+  margin-top: 20px;
+  color:rgb(0, 85, 74);
+  font-size: 18px;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  text-align: right;
+}
+
+
+.img-blog {
+    width: 500rem;
+}
+.gif {
+  width: 55rem;;
+}
+.copyright{
+      font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      font-size: 15px;
+      padding-bottom: 10px;
+      color: rgb(1, 117, 102);
+      text-align: center;
+      margin-top: 53px;
+  }
+
+  @media only screen and (max-width: 1366px) and (max-width: 1024px) {
+    .copyright {
+      font-size: 1px;
+    }
+  }
+
+
+  
+</style>
+
+</head>
+
+<body>
+  <div id="image"></div>
+<!-- Section: Header -->
+<header class="header">
+  <div class="container">
+     <section class="wrapper">
+      <section class="info">
+        <img src="/articles/logo/IMG_3945.PNG">
+      </section>
+        <h1><a href="/articles/blog.html" class="brand">HackerNap</a></h1>
+        <button type="button" class="opened-menu">
+           <span></span>
+           <span></span>
+           <span></span>
+           <span></span>
+        </button>
+        <div class="overlay"></div>
+        <nav class="navbar">
+          <button type="button" class="closed-menu">
+            <img src="../articles/asset/closed.svg" class="closed-icon" alt="closed">
+         </button>
+         <ul class="menu">
+            <li class="menu-item"><a href="/ar.tools.html" target="_blank">أدوات</a></li>
+            <li class="menu-item menu-item-has-children">
+               <a href="/articles/blog.html" data-toggle="sub-menu">مختبرات<i class="expand"></i></a>
+               <ul class="sub-menu">
+                  <li class="menu-item"><a href="/lab/Xss-labs.html" target="_blank">Xss</a></li>
+               </ul>
+            </li>
+            <li class="menu-item menu-item-has-children">
+               <a href="/articles/blog.html" data-toggle="sub-menu">تعلم القرصنة<i class="expand"></i></a>
+               <ul class="sub-menu">
+                <li class="menu-item"><a href="/articles/web-application-penetration-test.html">إختبار إختراق تطبيقات الويب</a></li>
+                <li class="menu-item"><a href="/articles/blogs/python-libraries-pentester.html">أفضل مكتبات بايثون في إختبار الإختراق</a></li>
+                <li class="menu-item"><a href="/articles/blogs/different-types-and-methods-of-penetration-testing.html">أنواع وطرق إختبار الإختراق</a></li>
+               </ul>
+            </li>
+            <li class="menu-item"><a href="/index.html">العالم الافتراضي</a></li>
+          </ul>
+        </nav>
+     </section>
+  </div>
+</header>
+      <script src="/articles/js/script.js" defer></script>
+      <br>
+      <br>
+      <br>
+      
+      <div class="post">
+        <div class="date">HackerNap 2021</div>
+    
+        <h2 class="title">{تعلم كيف تتعلم}</h2>
+          <h3>نقضي سنوات من حياتنا في الذهاب إلى المدرسة ، ولكن هناك العديد من المهارات الحياتية المفقودة من المناهج الدراسية النموذجية. التفكير النقدي والمحادثات البناءة والتعامل مع الأموال والتجارة وإدارة الوقت ذي كلها ليست سوى أمثلة قليلة هناك مهارة أخرى لا نقضي وقتًا كافيًا في صقلها وهي تعلم كيفية التعلم.</h3>
+          <br>
+          <img src="https://media3.giphy.com/media/PkWalgZ1EL48sxV8Z5/200.webp?cid=ecf05e476fnpygdqlne8a93n14ik9rka59avb6fe5h3dgx3n&rid=200.webp&ct=g" rel="nofollow" alt="gif-photo" class="gif">
+          <br>
+          <h2>نسيان أسلوب التعلم المدرسي</h2>
+          <p>
+            في الوقت الحاضر توجد العديد من الطرق لدراسة او اتقان اي شي , يمكنك البحث في اليوتيوب عن اي شي تريد تعلمة مهما كان وسوف تجده اذا بحثت بطريقة صحيحة , الشيخ قوقل , والكتب , والدورات التدريبية واقصد المجانية في بداية الامر , المدونات مثل مدونتي 
+          </p>
+          <img src="https://media0.giphy.com/media/qOPGFmMPDlsty/giphy.gif?cid=ecf05e47o9ktdkukv5dqqev8tboiicbxan0q4rx14li9rqaj&rid=giphy.gif&ct=g" rel="nofollow" alt="gif-photo" class="gif">
+          <br>
+          <p>
+
+          </p>
+      </div>
+    
+    
+      <div class="post2">
+    
+        <h2>كيف يكون أسلوب التعلم</h2>
+        <p>
+            <em>يمكن ان يكون أسلوب التعلم الخاص بك سمعيًا مثل مقاطع الفيديو او اي شي صوتي</em><br>
+            <em>بصريًا مثل مشاهدة الرسومات والصور والمقاطع وهنا عصفورين بحجر سمعي وبنفس الوقت بصري</em><br>
+            <em>ولفظيًا ، وماديًا ، إلخ</em>
+        </p>
+        <br>
+        <h2>ابدأ</h2>
+        <em>غالبًا ما يقف التسويف في طريق التقدم لكن البدء هو نصف المعركة</em>
+        <img src="https://media2.giphy.com/media/ZoAa7lsmym6UE/giphy.gif?cid=790b76113f418833700dd3754d1852b459298cb38fe6bc4a&rid=giphy.gif&ct=g" rel="nofollow" alt="gif-photo" class="gif">
+        <h3>-بعض التقنيات التي يمكن أن تساعدك في القيام بذلك-</h3>
+        -
+        <br>
+        <em>العمل مقابل الإنتاج: التعلم ليس مشروعًا له بداية ووسط ونهاية. عليك أن تقع في حب هذه العمل الذي تقوم به. تريد أن تصبح كاتبا أفضل؟ اكتب كل يوم. مبرمج أفضل؟ كود كل يوم. من المستحيل معرفة كل شيء عن موضوع ما ، لكن يجب أن تتبنى هذه الاستحالة</em>
+        <br>
+        -
+        <br>
+        <em>التقسيم: هذا يتمثل في كسر ما تريد تعلمه في أجزاء يمكن التحكم فيها ، وإتقان كل جزء حتى تتمكن من تكوين صورة أكبر في عقلك. أولاً ، قم بتهيئة عقلك من خلال مسح المحتوى ، على سبيل المثال عن طريق مسح جدول محتويات الدورة التدريبية. بعد ذلك ، لاحظ أحد الأمثلة ، مثل مشاهدة مقطع فيديو للمدرس وهو ينشئ تطبيقًا. أخيرًا ، افعلها بنفسك. هذه خطوة مهمة للغاية لترسيخ معرفتك</em>
+        <br>-
+        <br>
+        <em>تقنية بومودورو: ربما تكون قد سمعت بالفعل عن هذه التقنية ، ولكن السبب في أنها تحظى بشعبية كبيرة هو أنها تعمل بالفعل. أنت تعيِّن مؤقتًا ولا تفعل شيئًا سوى دراسة الموضوع المطروح ، واستمر في التركيز حتى ينتهي الوقت. يبلغ موقت بومودورو النموذجي 25 دقيقة مع استراحة لمدة 5 دقائق بعد ذلك</em>
+        <hr>
+        <p>
+        <h2>نصائح اخيره</h2>
+        <img src="https://media0.giphy.com/media/3ohs7HK8HXaL25J8qI/200w.webp?cid=ecf05e47spin4zx4dpxkqw84hxdb5wcfjanz55d9wxouitmg&rid=200w.webp&ct=g" rel="nofollow" alt="gif-photo" class="gif">
+        <h3>إذا اردت ان تتعلم شي ابحث الموضوع ليس بصعب فقط ابحث كل شي بين يديك وايضا أهم شي في مجالنا اختبار الاختراق بشكل عام البحث المجال يعتمد على البحث والتطبيق والفهم وركز على البحث مرا اخره </h3>
+        <h3>كلام من ذهب اعتمد الخطوة القادمة إذا بحثت عن اي شي ولم تجده خصوصا في اختبار الاختراق ككل ماذا تفعل بكل بساطة أذا كنت تبحث باللغة العربية انتقل ابحث بالغة الانجليزية كيف <br>ادخل مترجم قوقل واكتب الشي الذي تريد البحث عنه وحول اللغة انجليزي وابحث عنه في قوقل سوف تجد النتائج ادخل مقالات او اي شي وحط ترجمة قوقل لترجمة الصفحة الى العربية ذا كله اذا كنت تعاني من ضعف اللغة الانجليزية او لا تجيدها شفت كيف الموضوع سهل</h3>
+        <h3>يعني لا توقف بحث بلغه وحدة بس نوع او غير طريقة بحثك عن الشي</h3>
+
+        <h3>وكل ما تبحث وتتعلم اكثر ستجد متعة في التعلم سوف تترك كل شي اخر من اجل ان تتعلم بالطريقة التي تحبها ليس الطريقة التي في المدارس مصطلح من قاموسي</h3>
+        <br>
+        اللهم صل على سيدنا محمد
+        </p>
+      
+      </div>
+      </div>
+
+      
+      <footer class="copyright">
+        <br>
+        <br>
+        <a href="http://www.snapchat.com/add/ii42"target="_blank">Snapchat</a>
+        <a href="https://twitter.com/_naplon"target="_blank">Twitter</a>
+        <a href="https://www.instagram.com/3h6h/"target="_blank">Instagram</a>
+        <a href="https://t.me/naplon0"target="_blank">Telegram</a>
+        &#128125; تواصل معي
+        <br>
+        HackerNap &#169; حقوق النشر 2021
+      </footer>
+</body>
+</html> 

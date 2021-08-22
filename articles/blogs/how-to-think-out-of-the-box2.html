@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+
+<html lang="ar">
+
+<head>
+  <meta charset="utf-8">
+  <meta name = "viewport" content = "width = device-width, initial-scale = 1">
+  <meta name="author" content="Syahrizaldev">
+  <meta name="keywords" content="كيف تفكر خارج الصندوق في إكتشاف الثغرات , كيف اكتشف ثغرات الويب , كيف اتطور في اكتشاف الاخطاء , التفكير خارج الصندوق في إختبار الإختراق , التفكير خارج الصندوق , اسلوب اكتشاف الثغرات , طرق اكتشاف الثغرات , هكر ناب bugbounty , HackerNap">
+  <meta name="description" content="السلام عليكم قبل فترة قريت مقال او نقدر نقول كانت نصائح من مكتشف ثغرات فرنسي وشدتني المقالة وحبيت اشارككم ما كان في المقالة باللغة العربية">
+  <title> كيف تفكر خارج الصندوق في إكتشاف الثغرات الجزء الثاني </title>
+  <link rel="stylesheet" type="text/css" href="/articles/css/reset.min.css">
+  <link rel="stylesheet" type="text/css" href="/articles/css/style.css">
+  <link rel="shortcut icon" href="/articles/logo/IMG_3945.PNG">
+
+<style>
+@import url('https://fonts.googleapis.com/css?family=Heebo:400,700|Open+Sans:400,700');
+
+:root {
+  --color: #ffffff;
+  --transition-time: 0.5s;
+}
+
+* {
+  box-sizing: border-box;
+}
+a {
+  color: inherit;
+}
+.info img {
+  height: 3em;
+  margin-right: 1.5em;
+}
+@media screen and (max-width: 500px) {
+  .card {
+    max-width: calc(100vw - 15rem);
+  }
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+#image {
+    animation: scroll 70s linear infinite;
+    background: url(../image.png/IMG_3944.PNG);
+    background-size: cover;
+    height: 10vh;
+    width: 100%;
+    vertical-align: middle;
+    background-size: 100%;
+  }
+  @media only screen and (max-width: 1366px) {
+    #image {
+      background-image: url(../image.png/IMG_3944.PNG);
+      height: 8vh;
+      width: 100%;
+      background-size: 100%;
+      }
+  }
+  @keyframes scroll {100%{
+      background-position:0px -3000px;
+    }
+  }
+
+  body {
+  border: 16px solid rgb(0, 85, 74);
+  padding: 20px;
+  max-width: 900px;
+  width: 80%;
+  margin: 20px auto;
+  box-shadow: 0px 0px 10px #000;
+  background-color:rgb(214, 214, 214);
+}
+h1 {
+    text-align: center;
+    color: #000;
+}
+h2 {
+  font-size: 2rem;
+  color: #1a1c1d;
+  text-align: center;
+}
+h5 {
+  font-size: 18px;
+  color: #4a4e13;
+  text-align: center;
+}
+h3{
+  font-size: 15;
+  color: #000;
+  text-align: center;
+}
+p {
+  color:rgb(8, 19, 17);
+  font-size: 20px;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  text-align:center;
+}
+
+.date {
+  color: #030303;
+  letter-spacing: 0.1rem;
+}
+
+@media only screen and (max-width: 1366px) {
+    body {
+      width: 90%;
+      }
+      p {
+        font-size: 15px;
+      }
+      .post2 {
+        font-size: 15px;
+      }
+      h2 {
+        font-size: 14px;
+      }
+      .date {
+        font-size: 9px;
+        margin-top: -50px;
+      }
+  }
+
+hr {
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0.75),
+    rgba(0, 0, 0, 0)
+  );
+}
+
+.post2 {
+  margin-top: 20px;
+  color:rgb(0, 85, 74);
+  font-size: 18px;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  text-align: right;
+}
+
+
+.img-blog {
+    width: 500rem;
+}
+.gif {
+  width: 55rem;
+}
+.copyright{
+      font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      font-size: 15px;
+      padding-bottom: 10px;
+      color: rgb(1, 117, 102);
+      text-align: center;
+      margin-top: 53px;
+  }
+
+  @media only screen and (max-width: 1366px) and (max-width: 1024px) {
+    .copyright {
+      font-size: 1px;
+    }
+  }
+
+
+  
+</style>
+
+</head>
+
+<body>
+  <div id="image"></div>
+<!-- Section: Header -->
+<header class="header">
+  <div class="container">
+     <section class="wrapper">
+      <section class="info">
+        <img src="/articles/logo/IMG_3945.PNG">
+      </section>
+        <h1><a href="/articles/blog.html" class="brand">HackerNap</a></h1>
+        <button type="button" class="opened-menu">
+           <span></span>
+           <span></span>
+           <span></span>
+           <span></span>
+        </button>
+        <div class="overlay"></div>
+        <nav class="navbar">
+          <button type="button" class="closed-menu">
+            <img src="../articles/asset/closed.svg" class="closed-icon" alt="closed">
+         </button>
+         <ul class="menu">
+            <li class="menu-item"><a href="/ar.tools.html" target="_blank">أدوات</a></li>
+            <li class="menu-item menu-item-has-children">
+               <a href="/articles/blog.html" data-toggle="sub-menu">مختبرات<i class="expand"></i></a>
+               <ul class="sub-menu">
+                  <li class="menu-item"><a href="/lab/Xss-labs.html" target="_blank">Xss</a></li>
+               </ul>
+            </li>
+            <li class="menu-item menu-item-has-children">
+               <a href="/articles/blog.html" data-toggle="sub-menu">تعلم القرصنة<i class="expand"></i></a>
+               <ul class="sub-menu">
+                <li class="menu-item"><a href="/articles/web-application-penetration-test.html">إختبار إختراق تطبيقات الويب</a></li>
+                <li class="menu-item"><a href="/articles/blogs/python-libraries-pentester.html">أفضل مكتبات بايثون في إختبار الإختراق</a></li>
+                <li class="menu-item"><a href="/articles/blogs/different-types-and-methods-of-penetration-testing.html">أنواع وطرق إختبار الإختراق</a></li>
+               </ul>
+            </li>
+            <li class="menu-item"><a href="/index.html">العالم الافتراضي</a></li>
+          </ul>
+        </nav>
+     </section>
+  </div>
+</header>
+      <script src="/articles/js/script.js" defer></script>
+      <br>
+      <br>
+      <br>
+      
+      <div class="post">
+        <div class="date">HackerNap 2021</div>
+        <h1 class="title">{كيف تفكر خارج الصندوق في إكتشاف الثغرات 2}</h1><br><br>
+        <h2>
+             السلام عليكم .. ثاني مقال من سلسلة التفكير خارج الصندوق في أكتشاف الأخطاء ونصائح صائد اخطاء اليوم<br>
+             أشكرك لإخراج مالديك للعالم @s0md3v<br>
+             <a href="/articles/blogs/how-to-think-out-of-the-box.html"target="_blank" rel="nofollow" alt="how to think out of the box">(الجزء الأول من السلسلة (هنا</a><br>
+             أجل لنبداء
+        </h2>
+        <hr>
+        <hr> 
+        <br>
+        <h3>{كيف تجد الأخطاء التي ليست مكررة؟}</h3>
+        <p>ضعيف أو عيوب أتمتة بسهولة مثل عمليات الاستحواذ على النطاق الفرعي يتم Xss ثمار معلقة منخفضة مثل مربع بحث</p>
+        <p>في غضون الساعات القليلة الأولى عندما يتم نشر البرنامج على الملأ. هناك احتمال كبير للحصول على نسخ مكررة إذا أبلغت عن مثل هذه الأخطاء وستتركك أيضًا في السباق بحثًا عن الأخطاء التي ليس من السهل العثور عليها</p>
+        <br>
+        <p>
+          يُطلق على البحث عن مثل هذه الأخطاء في برامج متعددة الزراعة وهو مصطلح يستخدم لتفضيل الكمية على الجودة. من الواضح أنه ليس شيئًا رائعًا تفعله عندما تكون نيتك هي العثور على أخطاء جيدة ، وإجبار نفسك على تعلم أشياء إخبارية والحصول على مكافآت أكبر بكثير
+        <br>
+        ومع ذلك ، فإن العثور على الأخطاء أمر رائع لأنه ، حسنًا ... يسهل العثور عليها. يمكنك تعلم البرمجة والأجزء المملة للعثور على مثل هذه المشكلات بشكل أسرع من أي شخص آخر
+        </p><br>
+        <p>
+          المعرفة بالبرمجة هي مهارة رائعة أن تمتلكها. إذا كنت تستخدم أمان تطبيق الويب ، أقترح عليك تعلم<br>
+          <a href="/articles/blogs/python-basics.html"target="_blank">python</a> , HTML , js , PHP <br>
+          للمبتدئين للحصول على فهم أفضل لكيفية عمل تطبيقات الويب
+        </p><hr>
+      </div>
+    
+      <div class="post2">
+        <h1>{كيف تجد مجالات بحث جديدة؟}</h1><br><br>
+
+        <p>
+          الشيء الذي يمنع الناس من القيام بشيء جديد ومبدع هو افتقارهم إلى المعرفة. الباحثون الذين يجدون نواقل هجومية أو عيوبًا جديدة لديهم فهم جيد جدًا للموضوع.
+          على سبيل المثال ، لم تستغل<br>
+          <a href="https://twitter.com/orange_8361"target="_blank">Orange Tsai</a><br>
+          الشائعة url بطريق خطأ تطبيقات تحليل عناوين<br>
+          RFC لـ URIs أو بشكل أكثر دقة url أعتقد أنه قرأ مواصفات<br>
+          هي وثائق رسمية للبروتوكولات والمواصفات وما إلى ذلك (RFCs) حسنًا ، طلبات التعليقات<br>
+          فهي ليست ممتعة جدًا للقراءة بسبب اللغة الرسمية والكم الهائل من المعلومات ولكنها موارد ممتازة للتعرف على المعايير بالتفصيل. الأمر بسيط للغاية ، إذا كنت تريد معرفة شيء ما ، فاقرأه من الوثائق. إنه يعمل مع كل شيء بدءًا من تطبيق
+        <br>
+       . إلى بروتوكول الإنترنت أو مكتبة البرامج API
+        </p><br>
+        <p>
+          حسنًا ، لا توجد "نصيحة" أو "حيلة" للعثور على شيء جديد ، لكن الفكرة العامة هي فهم كيفية عمل الأشياء وتسأل نفسك باستمرار عما يمكن فعله
+        <br>
+        وايضاً إذا كنت تريد تفاصيل موضوع معين. أسهل طريقة للبحث عن المستندات التقنية هي استخدام فلتر البحث
+        <br>
+        google في "ext"<br>
+        "reflected XSS ext: pdf" على سبيل المثال
+        <br>
+        <br>
+        الشيء الذي أود أن أتطرق إليه هو أن الناس يقرؤون كتابات مكافأة الأخطاء لجرعتهم من المعرفة. من الجيد تعلم تطبيقات العالم الحقيقي للهجوم والإختلافات التي لوحظت ولكنها لا تخبر أي شيء عن السبب الأساسي للثغرة الأمنية وبالتالي يفشل القارئ في تحقيق شيء جديد باستخدام المعلومات. نعم ، قد يكون قادرًا على العثور على الأخطاء من خلال القيام بما فعله المؤلف أو باستخدام شكل مختلف منه ولكنه لن يساعد في اكتشاف جديد.
+        لذلك إذا كنت تبحث عن بحث أمني ، فحاول قراءة الأشياء المملة أيضًا
+       </p>
+        <br><hr>
+        <h1>{إذن ما الذي يجب على الناس فعله لفهم عمليات الكتابة والاستفادة منها حقًا؟ أو ما التكنولوجيا المستغلة في الكتابة؟ أو أي شيء آخر؟}</h1><br><br>
+        <p>
+          حول عمليات الكتابة عن مكافأة الأخطاء ، كما قلت سابقًا ، فهي موارد جيدة جدًا لتعلم تطبيقات العالم الحقيقي للهجوم ولكنها غالبًا ما تفتقر إلى التفاصيل.
+            على سبيل المثال ، إذا كنت تقرأ كتابةً حيث تمكن شخص ما من تجاوز حماية<br>SSRF<br> 
+            بدلاً من مجرد إضافة الحمولة النهائية إلى "قائمة التجاوزات" الخاصة بك ، فحاول معرفة سبب حدوث ذلك
+        </p><hr>
+        <h1>{كيف تجد الأخطاء المنطقية أو الأخطاء التي لا تندرج تحت أي فئة ، ولا يمكن العثور عليها باستخدام الأدوات أو تتطلب تفكيرًا حقيقيًا؟}</h1>
+        <p>
+          أقترح عليك قضاء المزيد من الوقت في التعرف على ما يفعلونه كشركة ، وما هي منتجاتهم المختلفة وكيف يتفاعلون مع العملاء.
+          اقضِ قدرًا كبيرًا من الوقت في تعيين تطبيق الويب الخاص بهم ، وكيف تتفاعل أجزاء مختلفة منه مع بعضها البعض. احصل على جميع المجالات الفرعية ونقاط النهاية في مرمى البصر. إذا كان لديهم واجهة برمجة تطبيقات ، اقرأ وثائقها.
+          ضع نفسك مكان المستخدم / العميل ، وفكر في ما ستفعله كمستخدم لتطبيق الويب واستخدم المعلومات التي تم جمعها مسبقًا لإساءة استخدام الوظيفة أو العثور على عيوب في العمل. حاول ربط أخطاء التكوين البسيطة المتسلسلة للحصول على تأثير أعلى.
+          يعد جمع المعلومات (السلبي والنشط) مرحلة مهمة للغاية ويحدد إلى حد كبير ما ستحصل عليه في الاختبار.
+          أيضًا ، لا بأس أن يكون يومك سيئًا. احصل على نوم مناسب ، اشرب كوبًا من الماء لجعل عقلك يعمل بنسبة 10٪ بشكل أكثر كفاءة . قد تكون مدمنا على العمل ولكن مهلا ، إذا كانت الراحة تنعش عقلك وتجعلك تعمل بشكل أكثر كفاءة ، فهذه صفقة جيدة ، أليس كذلك؟
+        </p>
+        <br>
+        <p>
+          تم ترجمة وتعديل المقالة بكل تفصيل وفائدة وشكراً وصلنا لين هنا بنفس الوقت سبحان الله
+        </p>
+        <br><hr>        
+        &#10084;اللهم صل على سيدنا محمد
+        <br>
+        <br>
+        <a href="http://www.snapchat.com/add/ii42"target="_blank">واخيراً لأستقبال مشاركاتكم تشرفوني سناب</a>
+        </p>
+      </div>
+
+
+      
+      <footer class="copyright">
+        <br>
+        <br>
+        <a href="http://www.snapchat.com/add/ii42"target="_blank">Snapchat</a>
+        <a href="https://twitter.com/_naplon"target="_blank">Twitter</a>
+        <a href="https://www.instagram.com/3h6h/"target="_blank">Instagram</a>
+        <a href="https://t.me/naplon0"target="_blank">Telegram</a>
+        &#128125; تواصل معي
+        <br>
+        HackerNap &#169; حقوق النشر 2021
+      </footer>
+</body>
+</html> 
