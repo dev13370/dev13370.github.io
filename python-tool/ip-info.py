@@ -3,7 +3,6 @@ import json
 
 
 #Through the tool, you can locate anyone you want in addition to the location coordinates from IP address only.
-#من خلال الأداة يمكنك تحديد موقع أي شخص تريد بالإضافة إلى إحداثيات الموقع من عنوان الايبي فقط
 
 print("\t       [•]IP Information[•] ")
 
@@ -18,13 +17,12 @@ print("""
 		            |_| 
 	--------------------------------------
 	|       -> By >> Naplon ◕_◕         |
-	|       -> Instagram: 3h6h           |
+	|       -> snapchat: ii42            |
 	|       -> Twitter : _naplon         |
 	|       -> Telegram: naplon0         | 
 	--------------------------------------                                                 
 
 Determine the location of the IP address and all private information
-تحديد موقع عنوان IP وجميع المعلومات الخاصة به
 """)
 
 
