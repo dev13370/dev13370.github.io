@@ -408,7 +408,7 @@ img {
     border-top: 1px solid #000000;
   }
   .header .menu > .menu-item > a .expand::before, .header .menu > .menu-item > a .expand::after {
-    background: rgb(0, 94, 81), 0 2px 4px -1px rgb(4, 255, 192);
+    background: rgb(0, 94, 81), 0 2px 4px -1px rgb(0, 94, 81);
   }
   .header .menu > .menu-item-has-children.active > a .expand:after {
     -webkit-transform: translate(-50%, -50%) rotate(0deg);
