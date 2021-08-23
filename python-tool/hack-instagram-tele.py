@@ -2,7 +2,7 @@ import requests
 import time
 import random
 import string
-#تهكير انستغرام ويرسلها تيليجرام
+
 #Hack Instagram and send it Telegram
 
 A = '\033[1;10m'
@@ -21,7 +21,7 @@ print(f"""{A}{D}
 | |\  | (_| | |_) | | (_) | | | |{C}
 |_| \_|\__,_| .__/|_|\___/|_| |_|
             | | instagram: 3h6h                 
-            |_| snap: tv-of  
+            |_| snap: ii42 
                 Telegram: naplon0  
 <>---<>---<>---<>---<>---<>---<>---<>    
 
