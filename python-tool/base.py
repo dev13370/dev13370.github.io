@@ -19,8 +19,8 @@ The place for encoding and decoding only.
 					| |                  
 					|_| 
 	--------------------------------------
-	|       -> By >> Naplon ◕_◕          |
-	|       -> SnapChat: tv-of           |
+	|       -> By >> Naplon ◕_◕         |
+	|       -> SnapChat: ii42            |
 	|       -> Instagram: 3h6h           |
 	|       -> Twitter : _naplon         |
 	|       -> Telegram: naplon0         | 
