@@ -9,7 +9,7 @@ const COMMANDS = {
     'Xss Labs | HackerNap<br>البرمجة عبر المواقع / هجوم حقن الشيفرة المصدريّة عبر موقع وسيط  هي أحد أنواع الهجوم التي يتعرض لها الأنظمة الحاسوبية، ونجدها خصوصاً في تطبيقات الإنترنت عبر ما يسمى برمجة بالحقن، التي يلجأ فيها بعض مستخدمي الإنترنت المخربين لإدخال بعض الجمل البرمجية للصفحات التي يستعرضها الآخرون. وعادة ما نجد هذا النوع من الهجوم في المواقع التي تستستخدم لغة اتش تي ام ال, <br>تم إنشاء هذا الموقع من أجل الممارسة ، من فضلك لا تخترق',
 
   location: 
-    "Go to our official website:<br><a href='../ar.index.html' class='success link'>HackerNap</a>",
+    "Go to our official website:<br><a href='../index.html' class='success link'>HackerNap</a>",
   contact:
     "You can contact me via the following links:<br><a href='http://www.snapchat.com/add/ii42' class='success link'>Snapchat</a> ,<a href='https://twitter.com/_naplon' class='success link'>Twitter</a>",
  
